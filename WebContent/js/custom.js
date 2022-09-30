@@ -33,7 +33,7 @@ function selectSearch(id, value) {
 	
 	var param = {
 		url : "http://public.cloudsearch.nhnent.com/" + id 
-			+ "/v1/search/advanced.search?q=" + value 
+			+ "/v1/search/advanced.search?q=" + encodeURIComponent(value)  
 			+ "&size=20"
 			+ "&start=1"
 			+ "&return=" + returns
@@ -71,7 +71,7 @@ function selectSearch2(id, value) {
 	
 	var param = {
 		url : "http://alp-search.bugs.co.kr:9090/" + id 
-			+ "/v1/search/advanced.search?q=" + value 
+			+ "/v1/search/advanced.search?q=" + encodeURIComponent(value)  
 			+ "&size=20"
 			+ "&start=1"
 			+ "&return="  + returns
